@@ -195,14 +195,17 @@
   .work-meta .view svg { transition: transform .3s ease; }
 
   /* Bell preview */
-  .preview-bell { background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%); display: flex; flex-direction: column; padding: 40px; gap: 24px; }
-  .preview-bell .pb-nav { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; }
-  .preview-bell .pb-logo { color: #d4ff3a; font-family: var(--display); font-weight: 800; letter-spacing: -0.02em; font-size: 22px; }
-  .preview-bell .pb-hero { font-family: var(--display); font-weight: 800; font-size: clamp(40px, 6vw, 88px); letter-spacing: -0.03em; line-height: 0.95; color: #fff; margin-top: auto; }
-  .preview-bell .pb-hero em { color: #d4ff3a; font-style: normal; }
-  .preview-bell .pb-row { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: 0.1em; gap: 16px; }
-  .preview-bell .pb-line { height: 1px; background: #222; flex: 1; }
-  .preview-bell .pb-tag { padding: 6px 14px; border: 1px solid #333; border-radius: 999px; color: #aaa; }
+  .preview-bell { background: linear-gradient(160deg, #0e0e0e 0%, #111827 100%); display: flex; flex-direction: column; padding: 40px; gap: 20px; position: relative; overflow: hidden; }
+  .preview-bell::before { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&q=60') center/cover; opacity: .18; }
+  .preview-bell .pb-nav { position: relative; display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; }
+  .preview-bell .pb-logo { color: #fff; font-family: var(--display); font-weight: 900; letter-spacing: -0.01em; font-size: 18px; }
+  .preview-bell .pb-logo em { color: #e8251a; font-style: normal; }
+  .preview-bell .pb-ticker { position: relative; background: #e8251a; margin: 0 -40px; padding: 6px 40px; font-family: var(--mono); font-size: 10px; letter-spacing: .15em; text-transform: uppercase; color: #fff; white-space: nowrap; overflow: hidden; }
+  .preview-bell .pb-hero { position: relative; font-family: var(--display); font-weight: 900; font-size: clamp(36px, 5.5vw, 80px); letter-spacing: -0.02em; line-height: 0.9; color: #fff; text-transform: uppercase; margin-top: auto; }
+  .preview-bell .pb-hero em { color: #e8251a; font-style: normal; display: block; }
+  .preview-bell .pb-row { position: relative; display: flex; align-items: center; gap: 12px; font-family: var(--mono); font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: 0.1em; }
+  .preview-bell .pb-line { height: 1px; background: #2a2a2a; flex: 1; }
+  .preview-bell .pb-tag { padding: 6px 14px; background: #e8251a; border-radius: 2px; color: #fff; font-weight: 700; }
 
   /* ============ Contact ============ */
   .contact { padding: 140px 32px 80px; }
@@ -399,27 +402,28 @@
 <section id="work">
   <div class="section-head reveal">
     <div class="section-tag"><b>03</b>SELECTED WORK</div>
-    <h2 class="section-title">Recent demo. Tap to view live.</h2>
+    <h2 class="section-title">Recent demos. Tap to view live.</h2>
   </div>
-  <a class="work-card reveal r-scale" href="https://bellautomotiveservice.netlify.app/" target="_blank" rel="noopener" data-hover>
+  <a class="work-card reveal r-scale" href="https://gcwebdesigner1-sudo.github.io/bell-automotive/" target="_blank" rel="noopener" data-hover>
     <div class="frame">
       <div class="preview preview-bell">
         <div class="pb-nav">
-          <div class="pb-logo">BELL</div>
-          <span>SERVICES &nbsp; SHOP &nbsp; BOOK</span>
+          <div class="pb-logo">Bell<em>.</em>Automotive</div>
+          <span>Services &nbsp; About &nbsp; Call</span>
         </div>
-        <div class="pb-hero">Auto repair,<br/>done <em>right</em>.</div>
+        <div class="pb-ticker">Engine Diagnostics &nbsp;·&nbsp; Brake Service &nbsp;·&nbsp; Oil Changes &nbsp;·&nbsp; AC Repair &nbsp;·&nbsp; Electrical</div>
+        <div class="pb-hero">Bell<br/><em>Automotive</em></div>
         <div class="pb-row">
-          <span class="pb-tag">Est. 1986</span>
+          <span class="pb-tag">4.8 ★</span>
           <div class="pb-line"></div>
-          <span>Open today · (801)</span>
+          <span>Anderson, CA · Since 1999</span>
         </div>
       </div>
     </div>
     <div class="work-meta">
       <div>
         <h3>Bell Automotive Service</h3>
-        <div class="tag">Auto Mechanic / Demo</div>
+        <div class="tag">Auto Repair / Demo</div>
       </div>
       <span class="view">View site
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
